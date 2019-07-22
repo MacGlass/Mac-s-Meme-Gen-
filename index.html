@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mac's Meme Gen'</title>
+  <meta charset="utf-8">
+
+  <style>
+    
+    img{
+      width: 100%;
+      height:100%;
+    }
+    input {
+      width: 95%;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(0, 0, 0);
+      font-size: 30px;
+    }
+
+    .newMeme {
+      width: 400px;
+      height: 225px;
+      background: rgb(255, 255, 255);
+      position: relative;
+      text-align: center;
+      top: 0;
+      left: 0;
+    }
+
+    .firsttext,
+    .secondtext {
+      font-size: 25px;
+      color: white;
+      font-family: sans-serif;
+      position: absolute;
+      left: 0;
+      right: 0;
+      font-weight: 600;
+
+      text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+
+    .firsttext {
+      top: 0;
+    }
+
+    .secondtext {
+      bottom: 0;
+    }
+
+    .wrap {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .remove-button {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      opacity: 0;
+      transition: .3s opacity;
+    }
+
+    .newMeme:hover .remove-button {
+      opacity: 1;
+    }
+  </style>
+
+<body>
+
+  <div class="header">
+    <h1>Mac's Memes</h1>
+  </div>
+
+  <form>
+    Image URL:<br>
+    <input type="url" name="memeImage" id="memeImage" placeholder="Link to image" required>
+    <br>Text On Top:<br>
+    <input type="text" id="onTop" placeholder="Text to appear on top of image"><br>
+    Text On Bottom:<br>
+    <input type="text" id="onBottom" placeholder="Text to appear on bottom of image">
+    <br> <button id="submitButton" type="button">Submit</button>
+  </form>
+
+  <div class="wrap"></div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
